@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IngressoModel } from './ingresso.model';
 
 @Component({
@@ -9,7 +9,9 @@ import { IngressoModel } from './ingresso.model';
 export class IngressoComponent implements OnInit {
   ingresso: IngressoModel = new IngressoModel();
 
-  filmes = ['Clube de Luta', 'Titanic', 'Teoria de Tudo'];
+  //filmes = ['Clube de Luta', 'Titanic', 'Teoria de Tudo'];
+
+  @Input() filmes: Array<string> = new Array();
 
   constructor() {}
 
